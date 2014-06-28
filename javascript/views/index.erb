@@ -1,79 +1,54 @@
-<!doctype>
+<!Doctype>
 <html>
     <head>
         <title>twitter_demo</title>
         <link href="./css/style.css" rel="stylesheet" type="text/css">
         <link href="./css/reset.css" rel="stylesheet" type="text/css">
-        <img scr="./../images/home-icon-blue.png">
-        <img scr="./../images/bell-icon-blue.png">
-        <img scr="./../images/discover-icon-blue.png">
-        <img scr="./../images/me-icon-blue.png">
-        <meta charset="utf8">
+         <meta charset="utf8">
     </head>
     <body>
-
-
         <div class="nav-bar" id="nav-bar">
-
-            <div role="navigation" style="display: inline-block;">
-                <ul class="nav js-global-actions" id="global-actions">
-                    
-                    <li id="global-nav-home" class="home active new" data-global-action="home"> 
-                        <a class="js-nav" href="/" data-component-term="home_nav" data-nav="home" title="Home"> 
-                            <span class="Icon Icon--home Icon--large" id="home-icon"></span> 
+            <div>
+                <ul class="nav js-global-actions" id="global-actions">    
+                    <li class="active new"> 
+                        <a class="js-nav" href="./"> 
+                            <span class="Icon large" id="home-icon"></span> 
                             <span class="text">Home</span> 
                         </a> 
-                    </li>
-                    
-                    <li class="people notifications" data-global-action="connect"> 
-                        <a class="js-nav" href="/i/notifications" data-component-term="connect_nav" data-nav="connect" title="Notifications"> 
-                            <span class="Icon Icon--notifications Icon--large" id="bell-icon"></span> 
+                    </li>    
+                    <li> 
+                        <a class="js-nav" href="./"> 
+                            <span class="Icon large" id="bell-icon"></span> 
                             <span class="text">Notifications</span>  
-                            <span class="count"> 
                             </span>  
                         </a> 
-                    </li>
-                    
-                    <li class="topics" data-global-action="discover"> 
-                        <a class="js-nav" href="/i/discover" data-component-term="discover_nav" data-nav="discover" title="Discover"> 
-                            <span class="Icon Icon--discover Icon--large" id="discover-icon"></span> 
+                    </li>     
+                    <li> 
+                        <a class="js-nav" href="./"> 
+                            <span class="Icon large" id="discover-icon"></span> 
                             <span class="text">Discover</span> 
                         </a> 
                     </li>
-                    
-                    <li class="profile" data-global-action="profile"> 
-                        <a class="js-nav" href="/anatis" data-component-term="profile_nav" data-nav="profile" title="Me"> 
-                            <span class="Icon Icon--me Icon--large" id="me-icon"></span> 
+                    <li> 
+                        <a class="js-nav" href="./"> 
+                            <span class="Icon large" id="me-icon"></span> 
                             <span class="text">Me</span> 
                         </a> 
                     </li>
                 </ul>
-
-            <div id="search">
-                <form class="search">
-                    <input type="text" id="search-field" placeholder="Search" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-1" dir="auto" style="direction: auto; text-align: left;">  
-                    <button type="submit" class="search-button">
-                        <img src="./images/search_button.png">
-                    </button>
-                </form>
-          </div>
-
-
+                <div id="search">
+                    <form class="search">
+                        <input type="text" id="search-box" placeholder="Search" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" dir="auto" style="direction: auto; text-align: left;">  
+                        <button type="submit" class="search-button">
+                            <img src="./images/search_button.png">
+                        </button>
+                    </form>
+              </div>
             </div>
-
-
             <img src="images/twitter_logo_blue.png" class="logo" id="logo" data-pick="logo">
-
-
         </div>
-
-
-
-
         <div class="main-body" id="main-body">
-
             <img src="images/bg-image.png" class="bg-image" id="bg-image" data-pick="bg-image">
-
             <div class="user-info" id="user-info">
                 <div class="user-info-top" id="user-info-top"> 
                 </div>   
@@ -86,21 +61,13 @@
                     <input type="text" class="textbox" id="textbox" placeholder="Compose new tweet..."></input>
                 </div>        
             </div>
-
             <div class "tweet-list" id="tweet-list">
             </div>
-
-
-
         </div>
-
-               
-
         <script src='lib/twitter_demo.js'></script>
         <script src='lib/jquery-2.1.1.min.js'></script>
         <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
         <script>
-
 
         </script>
     </body>
