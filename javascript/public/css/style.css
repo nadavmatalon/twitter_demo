@@ -148,9 +148,11 @@ img.user-icon {
 #home-icon {
 	background-size: 30px;
     background-position: 0 0;
+    background-image: url(./../images/home-icon-blue.png) 0 0 no-repeat;
 	background-image: url(./../images/home-icon.png);
 	padding-right: 3px;
 }
+
 
 .nav .active>a, .nav>li>a:hover #home-icon {
     color: inherit;
@@ -161,6 +163,7 @@ img.user-icon {
 #bell-icon {
 	background-size: 30px;
 	background-position: 0 0;
+	background-image: url(./../images/bell-icon-blue.png) 0 0 no-repeat;
 	background-image: url(./../images/bell-icon.png);
 	padding-right: 3px;
 }
@@ -175,6 +178,7 @@ img.user-icon {
 #discover-icon {
 	background-size: 30px;
 	background-position: 0 0;
+	background-image: url(./../images/discover-icon-blue.png) 0 0 no-repeat;
 	background-image: url(./../images/discover-icon.png);
 	padding-right: 3px;
 }
@@ -188,6 +192,7 @@ img.user-icon {
 #me-icon {
 	background-size: 30px;
 	background-position: 0 0;
+	background-image: url(./../images/me-icon-blue.png) 0 0 no-repeat;
 	background-image: url(./../images/me-icon.png);
 	padding-right: 3px;
 
@@ -371,10 +376,10 @@ img.user-icon {
 }
 #global-actions .new:before {
     content: "\25CF";
-    font-size: 14px;
-    left: 5px;
+    font-size: 16px;
+    left: 17px;
     position: absolute;
-    top: 1px;
+    top: 3px;
 }
 #global-actions .people.new:before {
     left: 4px;
@@ -699,7 +704,134 @@ img.user-icon {
 
 
 
+/*xxxxx*/
 
+#search {
+  position: fixed;
+  top: 10px;
+  right: 200px;
+  display: inline-block;
+
+}
+
+#search-field {
+  position: relative;
+  top: -5;
+  right: 0;
+  z-index: 2;
+  font-size: 14px;
+  width: 242px;
+  height: 36px;
+  padding-left: 13px;
+  padding-right: 40px;
+  border-radius: 18px;
+  transition: all .2s ease-in-out;
+  opacity: .6;
+  -ms-filter: "alpha(opacity=60)";
+  display: block;
+  border: 0;
+  color: white;
+  background-color: gray;
+	text-overflow: initial;
+	white-space: nowrap;
+  overflow: hidden;
+
+ 
+
+/*  color: #fff;
+  background-color: transparent;
+background-image: url(./../images/search-box.png);
+  opacity: .6;
+  -ms-filter: "alpha(opacity=60)";
+  display: block;
+  width: 240px;
+  height: 34px;
+  padding: 5px 27px 6px 12px;
+  font-size: 12px;
+  line-height: 1;
+  color: #666;
+  background-color: #ccc;
+  border: 0;
+  border-radius: 21px;
+  transition: all .2s ease-in-out;*/
+}
+
+/*form.search {
+  position: relative;
+}*/
+
+/*form.search:before {
+  content:'';
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-position: -48px 0;
+  position: absolute;
+  top:8px;
+  left:8px;
+  opacity: .5;
+  z-index: 1000;
+}*/
+.search-button {
+  position: relative;
+	top: -34;
+	left: 210;
+  border: 0;
+  background-color: transparent;
+  padding-top: 5px;
+   outline: none;
+
+}
+
+.search-button img {
+  height: 14px;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  background-color: transparent;
+  padding-top: 5px;
+  z-index: 20;
+     outline: none;
+
+}
+
+#search-box {
+  position: absolute;
+  top: -4;
+  right: 0;
+  z-index: 2;
+  width: 242px;
+  height: 34px; 
+
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color:    #222;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color:    #222;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color:    #222;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color:    #222;
+}
+
+
+textarea:focus, input:focus{
+    outline: 0;
+    -webkit-appearance: textfield;
+    letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	-webkit-writing-mode: horizontal-tb;
+	overflow-y: scroll;
+}
 
 
 
