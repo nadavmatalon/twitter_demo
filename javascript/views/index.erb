@@ -1,13 +1,38 @@
 <!doctype>
 <html>
-	<head>
-		<title>twitter_demo</title>
-		<link href="./css/style.css" rel="stylesheet">
-		<meta charset="utf8">
+    <head>
+        <title>twitter_demo</title>
+        <link href="./css/style.css" rel="stylesheet">
+        <meta charset="utf8">
     </head>
     <body>
-        <p>twitter_demo</p>
-        <img src="images/paper.png" data-pick='paper'>
+        <div class="nav-bar" id="nav-bar">
+            <img src="images/twitter_logo_blue.png" class="logo" id="logo" data-pick="logo">
+        </div>
+        <div class="main-body" id="main-body">
+
+            <img src="images/bg-image.png" class="bg-image" id="bg-image" data-pick="bg-image">
+
+            <div class="user-info" id="user-info">
+                <div class="user-info-top" id="user-info-top"> 
+                </div>   
+                <div class="user-info-middle" id="user-info-middle">
+                    <div class="user-icon-container" id="user-icon-container">
+                        <img src="images/user-icon.png" class="user-icon" id="user-icon" data-pick="user-icon">
+                    </div>
+                </div>  
+                <div class="user-info-bottom" id="user-info-bottom">
+                    <input type="text" class="textbox" id="textbox" placeholder="Compose new tweet..."></input>
+                </div>        
+            </div>
+
+            <div class "tweet-list" id="tweet-list">
+            </div>
+
+
+
+        </div>
+                
 
         <script src='lib/twitter_demo.js'></script>
         <script src='lib/jquery-2.1.1.min.js'></script>
