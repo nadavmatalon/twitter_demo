@@ -8,76 +8,73 @@
     </head>
     <body>
         <div class="nav-bar" id="nav-bar">
-            <div>
-                <ul class="nav js-global-actions" id="global-actions">
-                    <li class="nav-button active" id="home-button-container">
-                        <a> 
-                            <span class="Icon large" id="home-icon"></span> 
-                            <span class="text">Home</span> 
-                        </a> 
-                    </li>    
-                    <li class="nav-button" id="bell-button-container"> 
-                        <a> 
-                            <span class="Icon large" id="bell-icon"></span> 
-                            <span class="text">Notifications</span>  
-                            </span>  
-                        </a> 
-                    </li>     
-                    <li class="nav-button" id="discover-button-container"> 
-                        <a> 
-                            <span class="Icon large" id="discover-icon"></span> 
-                            <span class="text">Discover</span> 
-                        </a> 
-                    </li>
-                    <li class="nav-button" id="me-button-container"> 
-                        <a> 
-                            <span class="Icon large" id="me-icon"></span> 
-                            <span class="text">Me</span> 
-                        </a> 
-                    </li>
-                </ul>
-                <div id="search">
-                    <form class="search">
-                        <input type="text" id="search-box" placeholder="Search" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" dir="auto" style="direction: auto; text-align: left;">  
-                        <button type="submit" class="search-button">
-                            <img src="./images/search_button.png">
-                    </form>
-                </div>
-
-              <div id="direct">
+            <ul class="nav js-global-actions" id="global-actions">
+                <li class="nav-button active" id="home-button-container">
+                    <a> 
+                        <span class="Icon large" id="home-icon"></span> 
+                        <span class="text">Home</span> 
+                    </a> 
+                </li>    
+                <li class="nav-button" id="bell-button-container"> 
+                    <a> 
+                        <span class="Icon large" id="bell-icon"></span> 
+                        <span class="text">Notifications</span>
+                    </a> 
+                </li>     
+                <li class="nav-button" id="discover-button-container"> 
+                    <a> 
+                        <span class="Icon large" id="discover-icon"></span> 
+                        <span class="text">Discover</span> 
+                    </a> 
+                </li>
+                <li class="nav-button" id="me-button-container"> 
+                    <a> 
+                        <span class="Icon large" id="me-icon"></span> 
+                        <span class="text">Me</span> 
+                    </a> 
+                </li>
+            </ul>
+            <div id="search">
+                <form class="search">
+                    <input type="text" id="search-box" placeholder="Search" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" dir="auto" style="direction: auto; text-align: left;">  
+                    <button type="submit" class="search-button">
+                        <img src="./images/search_button.png">
+                    </button>
+                </form>
+            </div>
+            <div id="direct">
                 <form class="direct-button">
-                     <button type="button" class="direct-message" id="direct-message">
+                    <button type="button" class="direct-message" id="direct-message">
                         <img src="./../images/direct-icon.png" onmouseover="this.src='./../images/direct-icon-blue.png';" onmouseout="this.src='l./../images/direct-icon.png';">
                     </button>
                 </form>
-             </div>
-
-              <div class="settings-button-nav-bar">
+            </div>
+            <div class="settings-button-nav-bar">
                 <form class="settings-button">
-                 <button type="button" class="settings" id="settings">
-                    <img src="./../images/settings-icon.png" onmouseover="this.src='./../images/settings-icon-blue.png';" onmouseout="this.src='l./../images/settings-icon.png';">
-                </button>
+                    <button type="button" class="settings" id="settings">
+                        <img src="./../images/settings-icon.png" onmouseover="this.src='./../images/settings-icon-blue.png';" onmouseout="this.src='l./../images/settings-icon.png';">
+                    </button>
                 </form>
-              </div>
-
-             <div class="compose-tweet">
+            </div>
+            <div class="compose-tweet">
                 <form class="compose-button">
-                 <button type="button" class="compose" id="compose">
-                    <img src="./../images/compose-tweet.png" onmouseover="this.src='./../images/compose-tweet.png';" onmouseout="this.src='l./../images/compose-tweet.png';">
-                </button>
+                    <button type="button" class="compose" id="compose">
+                        <img src="./../images/compose-tweet.png" onmouseover="this.src='./../images/compose-tweet.png';" onmouseout="this.src='l./../images/compose-tweet.png';">
+                    </button>
                 </form>
-              </div>
-
-
             </div>
             <img src="images/twitter_logo_blue.png" class="logo" id="logo" data-pick="logo">
         </div>
 
         <div class="main-body" id="main-body">
+
             <img src="images/bg-image.png" class="bg-image" id="bg-image" data-pick="bg-image">
+
             <div class="user-info" id="user-info">
+
                 <div class="user-info-top" id="user-info-top"> 
-                </div>   
+                </div>
+
                 <div class="user-info-middle" id="user-info-middle">
                     <span id="user-link">
                         <div class="user-icon-container" id="user-icon-container">
@@ -87,29 +84,27 @@
                         <text id="user-name">anonymous</text><br/>
                         <text id="user-address">@anonymous</text><br/>
                     </span>
-
-
                     <span id="user-stats-info">
                        <text class="user-stats" id="tweet-number"><a class "user-stats-header" href="./">TWEETS</a></text>
-                       <text class="user-stats" id="following"><a class "user-stats-header" href="./">FOLLOWING</text></a>
-                       <text class="user-stats" id="followers"><a class "user-stats-header" href="./">FOLLOWERS</text></a>
+                       <text class="user-stats" id="following"><a class "user-stats-header" href="./">FOLLOWING</a></text>
+                       <text class="user-stats" id="followers"><a class "user-stats-header" href="./">FOLLOWERS</a></text>
                     </span><br/>
-
                      <span id="user-stats-info-values">
                        <text class="user-stats-val" id="tweet-number-val"><a class "user-stats-link" href="./">10</a></text>
-                       <text class="user-stats-val" id="following-val"><a class "user-stats-link" href="./">8</text></a>
-                       <text class="user-stats-val" id="followers-val"><a class "user-stats-link" href="./">16</text></a>
+                       <text class="user-stats-val" id="following-val"><a class "user-stats-link" href="./">8</a></text>
+                       <text class="user-stats-val" id="followers-val"><a class "user-stats-link" href="./">16</a></text>
                     </span>
                 </div>
+
                 <div class="user-info-bottom" id="user-info-bottom">
-                    <input type="text" class="textbox" id="textbox" placeholder="Compose new tweet..."></input>
+                    <input type="text" class="textbox" id="textbox" placeholder="Compose new tweet...">         
                 </div>        
             </div>
+
             <div class="tweet-column-warper">
                 <div class="tweet-list-header" id="tweet-list-header">
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
-        
                 <% for n in 0..10 do %>
                     <div class="tweet-container">
                         <img class="avatar-icon" src="./images/avatar-icon.png">
@@ -123,6 +118,7 @@
                 <% end %>
             </div>
         </div>
+        
         <script src='lib/twitter_demo.js'></script>
         <script src='lib/jquery-2.1.1.min.js'></script>
         <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
@@ -150,12 +146,22 @@
                 $("#user-link").click(function() {
                     console.log("user link clicked");
                 });
+
+                // $("#textbox").focus(function() {
+                //     $("#user-info-bottom").toggleClass()
+
+                // });
+
+               $("#textbox").focus(function() {
+                    // $("#user-info-bottom").
+
+                });
+
             });
 
         </script>
     </body>
 </html>
-
 
  
 
