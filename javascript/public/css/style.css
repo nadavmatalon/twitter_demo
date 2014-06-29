@@ -545,9 +545,10 @@ textarea:focus, input:focus{
     background-image: url(./../images/home-icon.png));
 	position: relative;
 	top: 0;
-	left: 10;
+	left: 0;
     background-repeat: repeat-x;
 }
+
 .global-nav, .nav .active>a {
     background: transparent;
 }
@@ -560,16 +561,20 @@ textarea:focus, input:focus{
     height: 46px;
     overflow: hidden;
 }
+
 #global-actions>li>a {
     border-bottom: 4px solid #0084b4;
     transition: all .15s ease-in-out;
 }
+
 #global-actions>li:hover>a, #global-actions>li.active>a {
     height: 42px;
 }
+
 #global-actions>li:hover {
     color: #0084b4;
 }
+
 #global-actions .new:before {
     content: "\25CF";
     font-size: 16px;

@@ -9,28 +9,28 @@
     <body>
         <div class="nav-bar" id="nav-bar">
             <div>
-                <ul class="nav js-global-actions" id="global-actions">    
-                    <li class="active new"> 
-                        <a class="js-nav" href="./"> 
+                <ul class="nav js-global-actions" id="global-actions">
+                    <li class="nav-button active" id="home-button-container">
+                        <a> 
                             <span class="Icon large" id="home-icon"></span> 
                             <span class="text">Home</span> 
                         </a> 
                     </li>    
-                    <li> 
-                        <a class="js-nav" href="./"> 
+                    <li class="nav-button" id="bell-button-container"> 
+                        <a> 
                             <span class="Icon large" id="bell-icon"></span> 
                             <span class="text">Notifications</span>  
                             </span>  
                         </a> 
                     </li>     
-                    <li> 
-                        <a class="js-nav" href="./"> 
+                    <li class="nav-button" id="discover-button-container"> 
+                        <a> 
                             <span class="Icon large" id="discover-icon"></span> 
                             <span class="text">Discover</span> 
                         </a> 
                     </li>
-                    <li> 
-                        <a class="js-nav" href="./"> 
+                    <li class="nav-button" id="me-button-container"> 
+                        <a> 
                             <span class="Icon large" id="me-icon"></span> 
                             <span class="text">Me</span> 
                         </a> 
@@ -45,24 +45,24 @@
                 </div>
 
               <div id="direct">
-                <form class="direct-button" href="./">
-                     <button type="submit" class="direct-message" id="direct-message">
+                <form class="direct-button">
+                     <button type="button" class="direct-message" id="direct-message">
                         <img src="./../images/direct-icon.png" onmouseover="this.src='./../images/direct-icon-blue.png';" onmouseout="this.src='l./../images/direct-icon.png';">
                     </button>
                 </form>
              </div>
 
               <div class="settings-button-nav-bar">
-                <form class="settings-button" href="./">
-                 <button type="submit" class="settings" id="settings">
+                <form class="settings-button">
+                 <button type="button" class="settings" id="settings">
                     <img src="./../images/settings-icon.png" onmouseover="this.src='./../images/settings-icon-blue.png';" onmouseout="this.src='l./../images/settings-icon.png';">
                 </button>
                 </form>
               </div>
 
              <div class="compose-tweet">
-                <form class="compose-button" href="./">
-                 <button type="submit" class="compose" id="compose">
+                <form class="compose-button">
+                 <button type="button" class="compose" id="compose">
                     <img src="./../images/compose-tweet.png" onmouseover="this.src='./../images/compose-tweet.png';" onmouseout="this.src='l./../images/compose-tweet.png';">
                 </button>
                 </form>
@@ -117,21 +117,41 @@
                         <span class="tweet-expand">Expand</span>
                     </div>
                 <% end %>
-
-
-
-
-
             </div>
-
-
-
-
         </div>
         <script src='lib/twitter_demo.js'></script>
         <script src='lib/jquery-2.1.1.min.js'></script>
         <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
         <script>
+
+
+            function removeSelection() {
+                var numButtons =  $("#global-actions li").length;
+                for (i = 0; i < numButtons; i++) { 
+                    $('#global-actions').children().eq(i).removeClass("active");
+                }
+            }
+
+            $(document).ready(function(){
+                $(".nav-button").click(function() {
+                    var selected_button = $(this);
+                    removeSelection();
+                    $(selected_button).addClass("active");
+                });
+            });
+
+            $("#direct-message").on('click', function() {
+                console.log("direct-message button clicked");
+            });
+
+
+            $("#settings").on('click', function() {
+                console.log("settings button clicked");
+            });
+
+           $("#compose").on('click', function() {
+                console.log("compose button clicked");
+            });
 
         </script>
     </body>
