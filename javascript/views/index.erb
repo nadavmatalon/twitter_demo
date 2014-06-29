@@ -106,7 +106,7 @@
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
                 <% for n in 0..20 do %>
-                    <div class="tweet-container">
+                    <span class="tweet-container">
                         <img class="avatar-icon" src="./images/avatar-icon.png">
                         <span class="tweet-user-name">anonymous</span>
                         <span class="tweet-user-address">@anonymous</span>
@@ -114,8 +114,11 @@
                         <span class="tweet-time">29 June 2014</span>
                         <span class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae ligula aliquam lectus lobortis porta non a diam. Proin fringilla augue.</span>
                         <span class="tweet-expand">Expand</span>
-                    </div>
+                    </span>
                 <% end %>
+
+                
+
             </div>
         </div>
 
@@ -147,13 +150,8 @@
                     console.log("user link clicked");
                 });
 
-                // $("#textbox").focus(function() {
-                //     $("#user-info-bottom").toggleClass()
-
-                // });
-
-               $("#textbox").focus(function() {
-                    // $("#user-info-bottom").
+                $("#textbox").focus(function() {
+                     $(this).css("height", "=200");
 
                 });
 

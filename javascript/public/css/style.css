@@ -3,9 +3,7 @@ body {
    	color: #292f33;   
     font-size: 14px;
     line-height: 18px;
-    margin: 0;
     text-decoration: none;
-    min-width: 1000px;
 }
 
 img.bg-image {
@@ -185,7 +183,7 @@ textarea:focus, input:focus{
 .tweet-container {
 	float: left;
 	clear: left;
-	display: inline-table;
+	display: inline-block;
 	position: relative;
 	top: 0;
 	left: 0;
