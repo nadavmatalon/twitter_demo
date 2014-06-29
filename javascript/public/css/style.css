@@ -6,6 +6,7 @@ body {
     overflow-y: scroll;
     margin: 0;
     text-decoration: none;
+    min-width: 1000px;
 }
 
 img.bg-image {
@@ -83,8 +84,18 @@ textarea:focus, input:focus{
 	vertical-align: bottom;
 }
 
+.user-info {
+	width: 288px;
+	position: relative;
+	top: 20px;
+	left: 200px;
+
+}
+
 #user-info-top {
 	display: block;
+	position: relative;
+	clear: left;
 	width: 288px;
 	height: 95px;
 	border-top-left-radius: 4px;
@@ -92,20 +103,19 @@ textarea:focus, input:focus{
 	background-color: #0084B4;
 	border-bottom: 1px solid #e1e8ed;
 	position: relative;
-	top: 20;
-	left: 200;
+	top: 0;
+	left: 0;
 	z-index: 100;
-	background-position: 0 50%;
 }
 
 #user-info-middle {
 	display: block;
+	position:relative;
 	width: 288px;
 	height: 102px;
 	background-color: white;
-	position: relative;
-	top: 20;
-	left: 200;
+	top: 0;
+	left: 0;
 	z-index: 100;
 }
 
@@ -114,8 +124,8 @@ textarea:focus, input:focus{
 	width: 288px;
 	height: 56px;
 	position: relative;
-	top: 20;
-	left: 200;
+	top: 0;
+	left: 0;
 	z-index: 100;
 	border-color: #BFE0EC !important;
 	background-color: #E5F2F7 !important;

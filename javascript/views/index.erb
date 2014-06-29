@@ -63,7 +63,7 @@
              <div class="compose-tweet">
                 <form class="compose-button" href="./">
                  <button type="submit" class="compose" id="compose">
-                    <img src="./../images/compose-tweet.png" onmouseover="this.src='./../images/compose-tweet-blue.png';" onmouseout="this.src='l./../images/compose-tweet.png';">
+                    <img src="./../images/compose-tweet.png" onmouseover="this.src='./../images/compose-tweet.png';" onmouseout="this.src='l./../images/compose-tweet.png';">
                 </button>
                 </form>
               </div>
@@ -72,6 +72,7 @@
             </div>
             <img src="images/twitter_logo_blue.png" class="logo" id="logo" data-pick="logo">
         </div>
+
         <div class="main-body" id="main-body">
             <img src="images/bg-image.png" class="bg-image" id="bg-image" data-pick="bg-image">
             <div class="user-info" id="user-info">
@@ -104,20 +105,20 @@
                 <div class="tweet-list-header" id="tweet-list-header">
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
-                <div class="tweet-container">
-                    <img class="avatar-icon" src="./images/avatar-icon.png">
-                    <span class="tweet-user-name">anonymous</span>
-                    <span class="tweet-user-address">@anonymous</span>
-                    <span class="tweet-time">·</span>
-                    <span class="tweet-time">29 June 2014</span>
-                    <span class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae ligula aliquam lectus lobortis porta non a diam. Proin fringilla augue.</span>
-                    <span class="tweet-expand">Expand</span>
-                </div>
+        
+                <% for n in 0..10 do %>
+                    <div class="tweet-container">
+                        <img class="avatar-icon" src="./images/avatar-icon.png">
+                        <span class="tweet-user-name">anonymous</span>
+                        <span class="tweet-user-address">@anonymous</span>
+                        <span class="tweet-time">·</span>
+                        <span class="tweet-time">29 June 2014</span>
+                        <span class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae ligula aliquam lectus lobortis porta non a diam. Proin fringilla augue.</span>
+                        <span class="tweet-expand">Expand</span>
+                    </div>
+                <% end %>
 
 
-                <div class="tweet-container">
-
-                </div>
 
 
 
