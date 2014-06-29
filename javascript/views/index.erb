@@ -79,12 +79,16 @@
                 <div class="user-info-top" id="user-info-top"> 
                 </div>   
                 <div class="user-info-middle" id="user-info-middle">
-                    <div class="user-icon-container" id="user-icon-container">
-                        <img src="images/user-icon.png" class="user-icon" id="user-icon" data-pick="user-icon">
-                    </div>
-                    <text id="user-name">anonymous</text><br/>
-                    <text id="user-address">@anonymous</text><br/>
-                    
+                    <span id="user-link">
+                        <div class="user-icon-container" id="user-icon-container">
+                            <img src="images/user-icon.png" class="user-icon" id="user-icon" data-pick="user-icon">
+                        </div>
+                        
+                        <text id="user-name">anonymous</text><br/>
+                        <text id="user-address">@anonymous</text><br/>
+                    </span>
+
+
                     <span id="user-stats-info">
                        <text class="user-stats" id="tweet-number"><a class "user-stats-header" href="./">TWEETS</a></text>
                        <text class="user-stats" id="following"><a class "user-stats-header" href="./">FOLLOWING</text></a>
@@ -124,33 +128,28 @@
         <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
         <script>
 
-
-            function removeSelection() {
-                var numButtons =  $("#global-actions li").length;
-                for (i = 0; i < numButtons; i++) { 
-                    $('#global-actions').children().eq(i).removeClass("active");
-                }
-            }
-
             $(document).ready(function(){
                 $(".nav-button").click(function() {
                     var selected_button = $(this);
-                    removeSelection();
+                    removeNavButtonSelection();
                     $(selected_button).addClass("active");
                 });
-            });
+           
+                $("#direct-message").click(function() {
+                    console.log("direct-message button clicked");
+                });
 
-            $("#direct-message").on('click', function() {
-                console.log("direct-message button clicked");
-            });
+                $("#settings").click(function() {
+                    console.log("settings button clicked");
+                });
 
+                $("#compose").click(function() {
+                    console.log("compose button clicked");
+                });
 
-            $("#settings").on('click', function() {
-                console.log("settings button clicked");
-            });
-
-           $("#compose").on('click', function() {
-                console.log("compose button clicked");
+                $("#user-link").click(function() {
+                    console.log("user link clicked");
+                });
             });
 
         </script>
