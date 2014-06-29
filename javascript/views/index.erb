@@ -52,7 +52,7 @@
                 </form>
              </div>
 
-              <div>
+              <div class="settings-button-nav-bar">
                 <form class="settings-button" href="./">
                  <button type="submit" class="settings" id="settings">
                     <img src="./../images/settings-icon.png" onmouseover="this.src='./../images/settings-icon-blue.png';" onmouseout="this.src='l./../images/settings-icon.png';">
@@ -60,7 +60,7 @@
                 </form>
               </div>
 
-             <div>
+             <div class="compose-tweet">
                 <form class="compose-button" href="./">
                  <button type="submit" class="compose" id="compose">
                     <img src="./../images/compose-tweet.png" onmouseover="this.src='./../images/compose-tweet-blue.png';" onmouseout="this.src='l./../images/compose-tweet.png';">
@@ -81,7 +81,21 @@
                     <div class="user-icon-container" id="user-icon-container">
                         <img src="images/user-icon.png" class="user-icon" id="user-icon" data-pick="user-icon">
                     </div>
-                </div>  
+                    <text id="user-name">anonymous</text><br/>
+                    <text id="user-address">@anonymous</text><br/>
+                    
+                    <span id="user-stats-info">
+                       <text class="user-stats" id="tweet-number"><a class "user-stats-header" href="./">TWEETS</a></text>
+                       <text class="user-stats" id="following"><a class "user-stats-header" href="./">FOLLOWING</text></a>
+                       <text class="user-stats" id="followers"><a class "user-stats-header" href="./">FOLLOWERS</text></a>
+                    </span><br/>
+
+                     <span id="user-stats-info-values">
+                       <text class="user-stats-val" id="tweet-number-val"><a class "user-stats-link" href="./">10</a></text>
+                       <text class="user-stats-val" id="following-val"><a class "user-stats-link" href="./">8</text></a>
+                       <text class="user-stats-val" id="followers-val"><a class "user-stats-link" href="./">16</text></a>
+                    </span>
+                </div>
                 <div class="user-info-bottom" id="user-info-bottom">
                     <input type="text" class="textbox" id="textbox" placeholder="Compose new tweet..."></input>
                 </div>        
