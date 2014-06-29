@@ -185,7 +185,7 @@ textarea:focus, input:focus{
 .tweet-container {
 	float: left;
 	clear: left;
-	display: block;
+	display: inline-table;
 	position: relative;
 	top: 0;
 	left: 0;
