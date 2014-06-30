@@ -68,7 +68,6 @@
 
         <div class="main-body" id="main-body">
 
-
             <div class="user-info" id="user-info">
 
                 <div class="user-info-top" id="user-info-top"> 
@@ -104,7 +103,7 @@
                 <div class="tweet-list-header" id="tweet-list-header">
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
-                <% for n in 0..20 do %>
+                <% for n in 0..5 do %>
                     <div class="tweet-container" id="tweet-container">
                         <img class="avatar-icon" src="./images/avatar-icon.png">
                         <span class="tweet-user-name">anonymous</span>
@@ -115,11 +114,9 @@
                         <span class="tweet-expand">Expand</span>
                     </div>
                 <% end %>
+                <div class="spinner-container">
+                </div>
             </div>
-
-            <img src="./images/spinner-icon.gif" class="spinner">
-
-
         </div>
 
         <script src='lib/twitter_demo.js'></script>

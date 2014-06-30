@@ -514,12 +514,16 @@ textarea:focus, input:focus{
 	margin-left: 74px;
 }
 
-.spinner {
+.spinner-container {
+	float: left;
 	position: relative;
-	top: 45px;
-	left: 170px;
+	top: 20px;
+	left: 270px;
 	width: 50px;
 	height: 50px;
+	background-image: url(./../images/spinner-icon.gif);
+	background-size: 50px 50px;
+    background-repeat: no-repeat;
 }
 
 
