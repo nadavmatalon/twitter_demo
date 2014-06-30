@@ -9,3 +9,8 @@ function removeNavButtonSelection() {
     }
 }
 
+function addTweet() {
+	var newTweet = $("#tweet-container").clone();
+	$(newTweet).appendTo(".tweet-column-wrapper");
+};
+

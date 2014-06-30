@@ -101,12 +101,12 @@
                 </div>        
             </div>
 
-            <div class="tweet-column-warper">
+            <div class="tweet-column-wrapper">
                 <div class="tweet-list-header" id="tweet-list-header">
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
                 <% for n in 0..20 do %>
-                    <span class="tweet-container">
+                    <div class="tweet-container" id="tweet-container">
                         <img class="avatar-icon" src="./images/avatar-icon.png">
                         <span class="tweet-user-name">anonymous</span>
                         <span class="tweet-user-address">@anonymous</span>
@@ -114,12 +114,13 @@
                         <span class="tweet-time">29 June 2014</span>
                         <span class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae ligula aliquam lectus lobortis porta non a diam. Proin fringilla augue.</span>
                         <span class="tweet-expand">Expand</span>
-                    </span>
+                    </div>
                 <% end %>
-
-                
-
             </div>
+
+            <img src="./images/spinner-icon.gif" class="spinner">
+
+
         </div>
 
         <script src='lib/twitter_demo.js'></script>
@@ -150,10 +151,25 @@
                     console.log("user link clicked");
                 });
 
-                $("#textbox").focus(function() {
-                     $(this).css("height", "=200");
+                $(window).scroll(function () {
+                    var window_data = $(window).height();
+                  if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
+                    // setTimeout(function() {
+                    //     $("#loading-tweets").show();
+                    // }, 2000);
 
+                    // setTimeout(function() {
+                    //     addTweet();
+                    // }, 1000);
+
+                    // setTimeout(function() {
+                    //     $("#loading-tweets").hide();
+                    // }, 1000);
+                    }
                 });
+
+
+
 
             });
 
@@ -162,4 +178,9 @@
 </html>
 
  
-
+<!-- 
+ function addTweet() {
+      var html = $('<div>').append($('.tweet:last-child').clone()).remove().html();
+      $(html).appendTo($.find('.tweets')).slideDown();
+    }
+ -->
