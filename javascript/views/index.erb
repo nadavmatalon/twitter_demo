@@ -8,7 +8,6 @@
     </head>
     <body>
  
-
         <div class="nav-bar" id="nav-bar">
             <ul class="nav js-global-actions" id="global-actions">
                 <li class="nav-button active" id="home-button-container">
@@ -108,7 +107,7 @@
                 <div class="tweet-list-header" id="tweet-list-header">
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
-                <% for n in 0..1 do %>
+                <% for n in 0..10 do %>
                     <div class="tweet-container" id="tweet-container">
                         <img class="avatar-icon" src="./images/avatar-icon.png">
                         <span class="tweet-user-name">anonymous</span>
@@ -119,7 +118,9 @@
                         <span class="tweet-expand">Expand</span>
                     </div>
                 <% end %>
-            <div class="spinner">
+            <div class="spinner-container">    
+                <div class="spinner">
+                </div>
             </div>
         </div>
 
@@ -161,7 +162,7 @@
                     console.log($(document).scrollTop());
                     console.log($(window).height());
 
-                    // if ($(document).scrollTop() >=  840) {
+                    // if ($(document).scrollTop() >=  166) {
                     //     $(".spinner").show();
                     //     setTimeout(function() {
                     //         $(".spinner").hide();
