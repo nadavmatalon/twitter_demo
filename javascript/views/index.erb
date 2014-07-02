@@ -7,6 +7,8 @@
         <meta charset="utf8">
     </head>
     <body>
+ 
+
         <div class="nav-bar" id="nav-bar">
             <ul class="nav js-global-actions" id="global-actions">
                 <li class="nav-button active" id="home-button-container">
@@ -66,6 +68,8 @@
             <img src="images/twitter_logo_blue.png" class="logo" id="logo" data-pick="logo">
         </div>
 
+        
+
         <div class="main-body" id="main-body">
 
             <div class="user-info" id="user-info">
@@ -97,13 +101,14 @@
                 <div class="user-info-bottom" id="user-info-bottom">
                     <input type="text" class="textbox" id="textbox" placeholder="Compose new tweet...">         
                 </div>        
+  
             </div>
 
             <div class="tweet-column-wrapper">
                 <div class="tweet-list-header" id="tweet-list-header">
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
-                <% for n in 0..10 do %>
+                <% for n in 0..1 do %>
                     <div class="tweet-container" id="tweet-container">
                         <img class="avatar-icon" src="./images/avatar-icon.png">
                         <span class="tweet-user-name">anonymous</span>
@@ -114,9 +119,13 @@
                         <span class="tweet-expand">Expand</span>
                     </div>
                 <% end %>
-            </div>
             <div class="spinner">
             </div>
+        </div>
+
+        <div id="right-block">
+        </div>
+
         </div>
 
         <script src='lib/twitter_demo.js'></script>
@@ -149,13 +158,16 @@
 
                 $(window).scroll(function() {
   
-                    if ($(document).scrollTop() >=  47) {
-                        $(".spinner").show();
-                        setTimeout(function() {
-                            $(".spinner").hide();
-                            addTweet();
-                        }, 2000);
-                    };
+                    console.log($(document).scrollTop());
+                    console.log($(window).height());
+
+                    // if ($(document).scrollTop() >=  840) {
+                    //     $(".spinner").show();
+                    //     setTimeout(function() {
+                    //         $(".spinner").hide();
+                    //         addTweet();
+                    //     }, 2000);
+                    // };
                 });
             });
 

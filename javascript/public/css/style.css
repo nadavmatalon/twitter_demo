@@ -3,17 +3,51 @@ body {
    	color: #292f33;   
     font-size: 14px;
     line-height: 18px;
-    text-decoration: none;
-
+    text-decoration: none;	
 }
 
-/*img.bg-image {
-	width: 200%;
-	height: 50%;
-	position: fixed;
-	top: 0;
-	left: 0;
-}*/
+.main-body {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	-webkit-flex-direction: row; 
+   	flex-direction: row;
+   	-webkit-justify-content: center;
+   	justify-content: center;
+	width: 100%;
+	margin-top: 0;
+	margin-left: 0;
+	background-color: #C0DEED;
+	background-image: url('../images/bg-image.png');
+	background-repeat: no-repeat;
+	flex-wrap: wrap;
+	overflow: auto;
+}
+
+.main-body > div {
+	margin-top: 66px;
+	margin-left: 8px;
+	margin-right: 8px;
+	height: 100%;
+}
+
+
+.user-info {
+	min-width: 288px;
+}
+
+.tweet-column-wrapper {
+	min-width: 588px;
+	margin-bottom: 100px;
+}
+
+#right-block {
+	min-width: 288px;
+	background-color: lightgrey;
+	border: 1px solid darkgrey;
+	height: 200px;
+}
+
 
 img.logo {
    position: absolute;
@@ -47,28 +81,20 @@ textarea:focus, input:focus{
 	-webkit-writing-mode: horizontal-tb;
 }
 
-.main-body {
-	margin-top: 46px;
-	width: 100%;
-	height:100%;
-	background-color: #C0DEED;
-	background-image: url('../images/bg-image.png');
-	background-repeat: no-repeat;
-	overflow: auto;
-}
+
 
 #nav-bar {
-	display: block;
+	position: fixed;
+	width: 100%;
+	height: 46px;
+	margin-top: 0;
+	margin-left: 0;
 	background-color: rgb(245, 245, 245); 
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 	height: 46px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
 	font-family: "Gotham Narrow SSm",sans-serif,Arial;
 	font-size: 14px;
+	z-index: 1000;
 }
 
 #user-icon-container {
@@ -83,18 +109,9 @@ textarea:focus, input:focus{
 	vertical-align: bottom;
 }
 
-.user-info {
-	width: 288px;
-	position: relative;
-	top: 20px;
-	left: 200px;
-
-}
 
 #user-info-top {
-	display: block;
 	position: relative;
-	clear: left;
 	width: 288px;
 	height: 95px;
 	border-top-left-radius: 4px;
@@ -108,7 +125,6 @@ textarea:focus, input:focus{
 }
 
 #user-info-middle {
-	display: block;
 	position:relative;
 	width: 288px;
 	height: 102px;
@@ -119,7 +135,6 @@ textarea:focus, input:focus{
 }
 
 #user-info-bottom {
-	display: block;
 	width: 288px;
 	height: 56px;
 	position: relative;
@@ -149,16 +164,9 @@ textarea:focus, input:focus{
 	top: -10%;
 }
 
-.tweet-column-wrapper {
-	position: relative;
- 	width: 588px;
-	top: -235;
-	left: 502;
-}
+
 
 #tweet-list-header {
-	float: left;
-	display: block;
 	position: relative;
 	width: 588px;
 	height:47px;
@@ -184,9 +192,6 @@ textarea:focus, input:focus{
 }
 
 .tweet-container {
-	float: left;
-	clear: left;
-	display: inline-block;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -309,7 +314,6 @@ textarea:focus, input:focus{
   position: fixed;
   top: 10px;
   right: 200px;
-  display: inline-block;
 
 }
 
@@ -331,12 +335,11 @@ textarea:focus, input:focus{
   	background-color: gray;
 	text-overflow: initial;
 	white-space: nowrap;
-  	overflow: hidden;
 }
 
 .search-button {
   	position: relative;
-	top: -38;
+	top: -41;
 	left: 210;
   	border: 0;
   	background-color: transparent;
@@ -513,6 +516,17 @@ textarea:focus, input:focus{
 #followers-val {
 	margin-left: 74px;
 }
+
+.who-to-follow {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}
+
+
 
 .spinner {
 	display: none;
