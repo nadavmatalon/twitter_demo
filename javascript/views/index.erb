@@ -67,8 +67,6 @@
             <img src="images/twitter_logo_blue.png" class="logo" id="logo" data-pick="logo">
         </div>
 
-        
-
         <div class="main-body" id="main-body">
 
             <div class="user-info" id="user-info">
@@ -107,7 +105,7 @@
                 <div class="tweet-list-header" id="tweet-list-header">
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
-                <% for n in 0..10 do %>
+                <% for n in 0..5 do %>
                     <div class="tweet-container" id="tweet-container">
                         <img class="avatar-icon" src="./images/avatar-icon.png">
                         <span class="tweet-user-name">anonymous</span>
@@ -118,16 +116,22 @@
                         <span class="tweet-expand">Expand</span>
                     </div>
                 <% end %>
-            <div class="spinner-container">    
-                <div class="spinner">
+<!--             <div class="spinner-container">    
+ -->                <div class="spinner">
                 </div>
+<!--             </div>
+ -->        </div>
+
+            <div id="right-block">
             </div>
+
+        
+  <!--           <div class="bottom-section" id="bottom-section">
+
+            </div> -->
+            
         </div>
 
-        <div id="right-block">
-        </div>
-
-        </div>
 
         <script src='lib/twitter_demo.js'></script>
         <script src='lib/jquery-2.1.1.min.js'></script>
@@ -158,17 +162,21 @@
                 });
 
                 $(window).scroll(function() {
-  
-                    console.log($(document).scrollTop());
-                    console.log($(window).height());
 
-                    // if ($(document).scrollTop() >=  166) {
+                    console.log("window scrolltop" + $(window).scrollTop());
+                    console.log("document scrolltop" + $(document).scrollTop());
+                    console.log("document height" + $(document).height());
+                    console.log("window height" + $(window).height());
+
+
+                    // if ($(document).height() >= $(document).scrollTop() + $(window).height() + 50) {
                     //     $(".spinner").show();
                     //     setTimeout(function() {
-                    //         $(".spinner").hide();
+                    //         $(".spinner").remove();
                     //         addTweet();
                     //     }, 2000);
                     // };
+
                 });
             });
 
