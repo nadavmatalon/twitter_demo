@@ -4,7 +4,7 @@ body {
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
-    height: 100%;	
+	background-color: #C0DEED;
 }
 
 .main-body {
@@ -18,7 +18,6 @@ body {
 	width: 100%;
 	margin-top: 0;
 	margin-left: 0;
-	background-color: #C0DEED;
 	background-image: url('../images/bg-image.png');
 	background-repeat: no-repeat;
 	flex-wrap: wrap;
@@ -29,7 +28,6 @@ body {
 	margin-top: 66px;
 	margin-left: 8px;
 	margin-right: 8px;
-	height: 100%;
 }
 
 
@@ -39,16 +37,58 @@ body {
 
 .tweet-column-wrapper {
 	min-width: 588px;
-	margin-bottom: 100px;
 }
 
-#right-block {
-	min-width: 288px;
+#bottom-left-block {
+	width: 286px;
 	background-color: lightgrey;
 	border: 1px solid darkgrey;
-	height: 200px;
+	height: 265px;
+	margin-top: 10px;
+	background-color: white;
+	border-radius: 4px;
+	border-color: transparent;
+
 }
 
+.block-text-container {
+	padding-top: 16px;
+	padding-left: 16px;
+	padding-bottom: 1px;
+}
+
+.trends {
+	font-family: "Gotham Narrow SSm",sans-serif,Arial;
+	color: #4057A1;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.change {
+	font-family: "Gotham Narrow SSm",sans-serif,Arial;
+	margin-left: 5px;
+	font-size: 12px;
+	font-weight: 400;
+	color: #0084B4;
+	margin-bottom: 20px;
+}
+
+.trend-item {
+	font-family: "Gotham Narrow SSm",sans-serif,Arial;
+	margin-left: 18px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 14.5px;
+	font-weight: 400;
+	color: #0084B4;
+}
+
+.bottom-section {
+	height: 20px;
+	margin-left: 38%;
+	margin-right: 14%;
+}
 
 img.logo {
    position: absolute;
@@ -156,16 +196,15 @@ textarea:focus, input:focus{
 	margin: 13 13;
 	line-height: 18px;
 	color: #8899a6;
- 	border-color: rgba(0,132,180,0.25);
- 	font-size: 14px;
-  	position: relative;
-  	vertical-align: top;
-  	border: 1px solid #e1e8ed;
+	border-color: rgba(0,132,180,0.25);
+	font-size: 16px;
+	position: relative;
+	vertical-align: top;
+	border: 1px solid #e1e8ed;
 	border-radius: 3px;
 	top: -10%;
+	padding-left: 7px;
 }
-
-
 
 #tweet-list-header {
 	position: relative;
@@ -182,17 +221,18 @@ textarea:focus, input:focus{
 
 #tweet-list-header-text {
 	font-family: "Gotham Narrow SSm",sans-serif,Arial;
-	color: #66757f;
-	font-size: 22px;
-	font-weight: 300;
-	line-height: 22px;
+	color: #4057A1;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 23px;
+	letter-specing: 0.5px;
 	-webkit-margin-before: 0.83em;
 	-webkit-margin-after: 0.83em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
 }
 
-.tweet-container {
+#tweet-container {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -211,7 +251,7 @@ textarea:focus, input:focus{
 	height: 48px;
 	padding: 5px;
 	border-radius: 10px;
-
+    clear: both;
 }
 
 .tweet-user-name {
@@ -530,31 +570,23 @@ textarea:focus, input:focus{
 
 .spinner-container {
 	position: relative;
-	width: 50px;
-	height: 100px;
-	background-color: transparent;
-	margin-left: 280px;
+	width: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
 }
 
 
 .spinner {
 	display: none;
-	position: relative;
-	width: 50px;
-	height: 50px;
+	width: 25px;
+	height: 25px;
 	top: 25px;
-	background-image: url(./../images/spinner-icon.gif);
-	background-size: 50px 50px;
+	background-image: url(./../images/spinner.gif);
+	background-size: 25px 25px;
     background-repeat: no-repeat;
 }
 
-
-.bottom-section {
-	margin-top: 20px;
-	width: 100%;
-	height: 100px;
-	background-color: blue;
-}
 
 .nav .active>a, .nav>li>a:hover #home-icon {
     color: inherit;

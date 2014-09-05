@@ -2,12 +2,16 @@
 <html>
     <head>
         <title>twitter_demo</title>
+        <meta charset="utf8">
         <link href="./css/style.css" rel="stylesheet" type="text/css">
         <link href="./css/reset.css" rel="stylesheet" type="text/css">
-        <meta charset="utf8">
+        <script src='lib/jquery-2.1.1.min.js'></script>
+        <script src='lib/twitter_demo.js'></script>
+        <% if false %>
+            <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+        <% end %>
     </head>
     <body>
- 
         <div class="nav-bar" id="nav-bar">
             <ul class="nav js-global-actions" id="global-actions">
                 <li class="nav-button active" id="home-button-container">
@@ -65,48 +69,57 @@
                 </form>
             </div>
             <img src="images/twitter_logo_blue.png" class="logo" id="logo" data-pick="logo">
-        </div>
-
+        </div> 
         <div class="main-body" id="main-body">
-
-            <div class="user-info" id="user-info">
-
-                <div class="user-info-top" id="user-info-top"> 
+            <div>
+                <div class="user-info" id="user-info">
+                    <div class="user-info-top" id="user-info-top"> 
+                    </div>
+                    <div class="user-info-middle" id="user-info-middle">
+                        <span id="user-link">
+                            <div class="user-icon-container" id="user-icon-container">
+                                <img src="images/user-icon.png" class="user-icon" id="user-icon" data-pick="user-icon">
+                            </div>                        
+                            <text id="user-name">anonymous</text><br/>
+                            <text id="user-address">@anonymous</text><br/>
+                        </span>
+                        <span id="user-stats-info">
+                           <text class="user-stats" id="tweet-number"><a class "user-stats-header" href="./">TWEETS</a></text>
+                           <text class="user-stats" id="following"><a class "user-stats-header" href="./">FOLLOWING</a></text>
+                           <text class="user-stats" id="followers"><a class "user-stats-header" href="./">FOLLOWERS</a></text>
+                        </span><br/>
+                         <span id="user-stats-info-values">
+                           <text class="user-stats-val" id="tweet-number-val"><a class "user-stats-link" href="./">10</a></text>
+                           <text class="user-stats-val" id="following-val"><a class "user-stats-link" href="./">8</a></text>
+                           <text class="user-stats-val" id="followers-val"><a class "user-stats-link" href="./">16</a></text>
+                        </span>
+                    </div>
+                    <div class="user-info-bottom" id="user-info-bottom">
+                        <input type="text" class="textbox" id="textbox" placeholder="Compose new Tweet...">         
+                    </div>        
                 </div>
-
-                <div class="user-info-middle" id="user-info-middle">
-                    <span id="user-link">
-                        <div class="user-icon-container" id="user-icon-container">
-                            <img src="images/user-icon.png" class="user-icon" id="user-icon" data-pick="user-icon">
-                        </div>
-                        
-                        <text id="user-name">anonymous</text><br/>
-                        <text id="user-address">@anonymous</text><br/>
-                    </span>
-                    <span id="user-stats-info">
-                       <text class="user-stats" id="tweet-number"><a class "user-stats-header" href="./">TWEETS</a></text>
-                       <text class="user-stats" id="following"><a class "user-stats-header" href="./">FOLLOWING</a></text>
-                       <text class="user-stats" id="followers"><a class "user-stats-header" href="./">FOLLOWERS</a></text>
-                    </span><br/>
-                     <span id="user-stats-info-values">
-                       <text class="user-stats-val" id="tweet-number-val"><a class "user-stats-link" href="./">10</a></text>
-                       <text class="user-stats-val" id="following-val"><a class "user-stats-link" href="./">8</a></text>
-                       <text class="user-stats-val" id="followers-val"><a class "user-stats-link" href="./">16</a></text>
-                    </span>
+                <div id="bottom-left-block">
+                    <div class="block-text-container">
+                        <span class="trends">Trends</span>
+                        <span class="change">Change</span>
+                    </div>
+                    <p class="trend-item">#WhenIWakeUp</p>
+                    <p class="trend-item">#The Oooly Toooly</p>
+                    <p class="trend-item">#Tim Berger</p>
+                    <p class="trend-item">taletale</p>
+                    <p class="trend-item">AskStephanie</p>
+                    <p class="trend-item">#WhenIGoToSleep</p>
+                    <p class="trend-item">Clay Travis</p>
+                    <p class="trend-item">TMac</p>
+                    <p class="trend-item">Ron Washington</p>
                 </div>
-
-                <div class="user-info-bottom" id="user-info-bottom">
-                    <input type="text" class="textbox" id="textbox" placeholder="Compose new tweet...">         
-                </div>        
-  
             </div>
-
             <div class="tweet-column-wrapper">
                 <div class="tweet-list-header" id="tweet-list-header">
                     <h2 id="tweet-list-header-text">Tweets</h2>
                 </div>
-                <% for n in 0..5 do %>
-                    <div class="tweet-container" id="tweet-container">
+                <% for i in 0..4 do %>
+                    <div id="tweet-container">
                         <img class="avatar-icon" src="./images/avatar-icon.png">
                         <span class="tweet-user-name">anonymous</span>
                         <span class="tweet-user-address">@anonymous</span>
@@ -116,71 +129,14 @@
                         <span class="tweet-expand">Expand</span>
                     </div>
                 <% end %>
-<!--             <div class="spinner-container">    
- -->                <div class="spinner">
-                </div>
-<!--             </div>
- -->        </div>
-
-            <div id="right-block">
-            </div>
-
-        
-  <!--           <div class="bottom-section" id="bottom-section">
-
-            </div> -->
-            
+            </div>          
         </div>
-
-
-        <script src='lib/twitter_demo.js'></script>
-        <script src='lib/jquery-2.1.1.min.js'></script>
-        <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
-        <script>
-
-            $(document).ready(function(){
-                $(".nav-button").click(function() {
-                    var selected_button = $(this);
-                    removeNavButtonSelection();
-                    $(selected_button).addClass("active");
-                });
-           
-                $("#direct-message").click(function() {
-                    console.log("direct-message button clicked");
-                });
-
-                $("#settings").click(function() {
-                    console.log("settings button clicked");
-                });
-
-                $("#compose").click(function() {
-                    console.log("compose button clicked");
-                });
-
-                $("#user-link").click(function() {
-                    console.log("user link clicked");
-                });
-
-                $(window).scroll(function() {
-
-                    console.log("window scrolltop" + $(window).scrollTop());
-                    console.log("document scrolltop" + $(document).scrollTop());
-                    console.log("document height" + $(document).height());
-                    console.log("window height" + $(window).height());
-
-
-                    // if ($(document).height() >= $(document).scrollTop() + $(window).height() + 50) {
-                    //     $(".spinner").show();
-                    //     setTimeout(function() {
-                    //         $(".spinner").remove();
-                    //         addTweet();
-                    //     }, 2000);
-                    // };
-
-                });
-            });
-
-        </script>
+        <div class="bottom-section">
+            <div class="spinner-container">    
+                <div class="spinner">
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
