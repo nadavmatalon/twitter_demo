@@ -10,7 +10,7 @@
 ##Screenshots
 
 <a href="https://raw.githubusercontent.com/nadavmatalon/twitter_demo/master/javascript/public/images/twitter_demo_screenshot.png">
-	<img src="javascript/public/images/twitter_demo_screenshot.png" width="660px" height="340px" />
+	<img src="javascript/public/images/twitter_demo_screenshot.png" width="720px" height="400px" />
 </a>
 
 
