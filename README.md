@@ -41,6 +41,7 @@ Clone the repo to a locall folder and in the terminal run:
 
 ```bash
 $  cd twitter_demo
+$  bundle install
 $  shotgun
 ```
 
