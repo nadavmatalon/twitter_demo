@@ -4,6 +4,7 @@
 
 * [Screenshot](#screenshot)
 * [General Description](#general-description)
+* [How to Run](#how-to-run)
 * [Browsers](#browsers)
 
 
@@ -33,6 +34,20 @@ The guidlines for creating the mockup website were:
   up and disappearing in-between).
 * The mock-site should be responsive.
 
+
+##How to Run
+
+Clone the repo to a locall folder and in the terminal run:
+
+```bash
+$  cd twitter_demo
+$  shotgun
+```
+
+Then open the browser of your choice and go to:
+```
+http://localhost:9393/
+```
 
 ##Browsers
 
