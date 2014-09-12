@@ -187,11 +187,12 @@ textarea:focus, input:focus{
 	border: 1px solid;
 	border-radius: 0 0 5px 5px;
 	margin-left: -1px;
-	margin-bottom: -1px;	
+	margin-bottom: -1px;
+	text-align: center;
 }
 
 #textbox {
-	width: 262px;
+/*	width: 262px;
 	height: 30px;
 	margin: 13 13;
 	line-height: 18px;
@@ -203,8 +204,67 @@ textarea:focus, input:focus{
 	border: 1px solid #e1e8ed;
 	border-radius: 3px;
 	top: -10%;
-	padding-left: 7px;
+	padding-left: 7px;*/
 }
+
+.textbox {
+	width: 262px;
+	margin-top: 9px;
+	font-size: 16px;
+	padding-left: 7px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-right: 4px;
+	border: 1px solid #e1e8ed;
+	outline: none !important;
+	resize: none;
+	height: 30px;
+	overflow: auto;
+	background-color: rgb(255, 255, 255);
+	border-color: rgba(0,132,180,0.25);
+	border-radius: 3px;
+}
+
+
+.container-focus {
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	height: 120px !important;
+}
+
+
+.container-blur {
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	height: 56px;
+}
+
+
+.textbox-focus {
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	height: 92px;
+}
+
+
+.textbox-blur {
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+	height: 30px;
+}
+
 
 #tweet-list-header {
 	position: relative;

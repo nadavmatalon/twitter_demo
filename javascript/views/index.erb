@@ -1,4 +1,4 @@
-<!Doctype>
+<!DOCTYPE>
 <html>
     <head>
         <title>twitter_demo</title>
@@ -95,7 +95,7 @@
                         </span>
                     </div>
                     <div class="user-info-bottom" id="user-info-bottom">
-                        <input type="text" class="textbox" id="textbox" placeholder="Compose new Tweet...">         
+                        <textarea name="textbox" class="textbox" cols="20" rows="1"></textarea>
                     </div>        
                 </div>
                 <div id="bottom-left-block">
@@ -138,5 +138,22 @@
             </div>
         </div>
     </body>
+    <script>
+       $(document).ready(function() {
+            $('.textbox').on('focus', function() {
+                $('.user-info-bottom').removeClass('container-blur');
+                $('.textbox').removeClass('textbox-blur');
+                $('.user-info-bottom').addClass('container-focus');
+                $('.textbox').addClass('textbox-focus');
+                $('.textbox').scrollTop($('.textbox')[0].scrollHeight +40);
+            }).on('blur', function() {
+                $('.user-info-bottom').removeClass('container-focus');
+                $('.textbox').removeClass('textbox-focus');
+                $('.user-info-bottom').addClass('container-blur');
+                $('.textbox').addClass('textbox-blur');
+            });
+        });
+    </script>
+
 </html>
 
