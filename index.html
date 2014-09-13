@@ -1,1 +1,237 @@
-My GitHub Page
+<!DOCTYPE>
+<html>
+    <head>
+       <title>Twitter Demo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+        <link href="./css/reset.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+    </head>
+    <body>
+        <div class="nav-bar" id="nav-bar">
+            <ul class="nav js-global-actions" id="global-actions">
+                <li class="nav-button active" id="home-button-container">
+                    <a> 
+                        <span class="Icon large" id="home-icon"></span> 
+                        <span class="text">Home</span> 
+                    </a> 
+                </li>    
+                <li class="nav-button" id="bell-button-container"> 
+                    <a> 
+                        <span class="Icon large" id="bell-icon"></span> 
+                        <span class="text">Notifications</span>
+                    </a> 
+                </li>     
+                <li class="nav-button" id="discover-button-container"> 
+                    <a> 
+                        <span class="Icon large" id="discover-icon"></span> 
+                        <span class="text">Discover</span> 
+                    </a> 
+                </li>
+                <li class="nav-button" id="me-button-container"> 
+                    <a> 
+                        <span class="Icon large" id="me-icon"></span> 
+                        <span class="text">Me</span> 
+                    </a> 
+                </li>
+            </ul>
+            <div id="search">
+                <form class="search">
+                    <input type="text" id="search-box" placeholder="Search" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" dir="auto" style="direction: auto; text-align: left;">  
+                    <button type="submit" class="search-button">
+                        <img src="./images/search_button.png">
+                    </button>
+                </form>
+            </div>
+            <div id="direct">
+                <form class="direct-button">
+                    <button type="button" class="direct-message" id="direct-message">
+                        <img src="./../images/direct-icon.png" onmouseover="this.src='./../images/direct-icon-blue.png';" onmouseout="this.src='l./../images/direct-icon.png';">
+                    </button>
+                </form>
+            </div>
+            <div class="settings-button-nav-bar">
+                <form class="settings-button">
+                    <button type="button" class="settings" id="settings">
+                        <img src="./../images/settings-icon.png" onmouseover="this.src='./../images/settings-icon-blue.png';" onmouseout="this.src='l./../images/settings-icon.png';">
+                    </button>
+                </form>
+            </div>
+            <div class="compose-tweet">
+                <form class="compose-button">
+                    <button type="button" class="compose" id="compose">
+                        <img src="./../images/compose-tweet.png" onmouseover="this.src='./../images/compose-tweet.png';" onmouseout="this.src='l./../images/compose-tweet.png';">
+                    </button>
+                </form>
+            </div>
+            <img src="images/twitter_logo_blue.png" class="logo" id="logo" data-pick="logo">
+        </div> 
+        <div class="main-body" id="main-body">
+            <div>
+                <div class="user-info" id="user-info">
+                    <div class="user-info-top" id="user-info-top"> 
+                    </div>
+                    <div class="user-info-middle" id="user-info-middle">
+                        <span id="user-link">
+                            <div class="user-icon-container" id="user-icon-container">
+                                <img src="images/user-icon.png" class="user-icon" id="user-icon" data-pick="user-icon">
+                            </div>                        
+                            <text id="user-name">anonymous</text><br/>
+                            <text id="user-address">@anonymous</text><br/>
+                        </span>
+                        <span id="user-stats-info">
+                           <text class="user-stats" id="tweet-number"><a class "user-stats-header" href="./">TWEETS</a></text>
+                           <text class="user-stats" id="following"><a class "user-stats-header" href="./">FOLLOWING</a></text>
+                           <text class="user-stats" id="followers"><a class "user-stats-header" href="./">FOLLOWERS</a></text>
+                        </span><br/>
+                         <span id="user-stats-info-values">
+                           <text class="user-stats-val" id="tweet-number-val"><a class "user-stats-link" href="./">10</a></text>
+                           <text class="user-stats-val" id="following-val"><a class "user-stats-link" href="./">8</a></text>
+                           <text class="user-stats-val" id="followers-val"><a class "user-stats-link" href="./">16</a></text>
+                        </span>
+                    </div>
+                    <div class="user-info-bottom" id="user-info-bottom">
+                        <textarea name="textbox" class="textbox" cols="20" rows="1"></textarea>
+                    </div>        
+                </div>
+                <div id="bottom-left-block">
+                    <div class="block-text-container">
+                        <span class="trends">Trends</span>
+                        <span class="change">Change</span>
+                    </div>
+                    <p class="trend-item">#WhenIWakeUp</p>
+                    <p class="trend-item">#The Oooly Toooly</p>
+                    <p class="trend-item">#Tim Berger</p>
+                    <p class="trend-item">taletale</p>
+                    <p class="trend-item">AskStephanie</p>
+                    <p class="trend-item">#WhenIGoToSleep</p>
+                    <p class="trend-item">Clay Travis</p>
+                    <p class="trend-item">TMac</p>
+                    <p class="trend-item">Ron Washington</p>
+                </div>
+            </div>
+            <div class="tweet-column-wrapper">
+                <div class="tweet-list-header" id="tweet-list-header">
+                    <h2 id="tweet-list-header-text">Tweets</h2>
+                </div>
+                    <div id="tweet-container">
+                        <img class="avatar-icon" src="./images/avatar-icon.png">
+                        <span class="tweet-user-name">anonymous</span>
+                        <span class="tweet-user-address">@anonymous</span>
+                        <span class="tweet-time">·</span>
+                        <span class="tweet-time">29 June 2014</span>
+                        <span class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae ligula aliquam lectus lobortis porta non a diam. Proin fringilla augue.</span>
+                        <span class="tweet-expand">Expand</span>
+                    </div>
+                    <div id="tweet-container">
+                        <img class="avatar-icon" src="./images/avatar-icon.png">
+                        <span class="tweet-user-name">anonymous</span>
+                        <span class="tweet-user-address">@anonymous</span>
+                        <span class="tweet-time">·</span>
+                        <span class="tweet-time">29 June 2014</span>
+                        <span class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae ligula aliquam lectus lobortis porta non a diam. Proin fringilla augue.</span>
+                        <span class="tweet-expand">Expand</span>
+                    </div>
+                    <div id="tweet-container">
+                        <img class="avatar-icon" src="./images/avatar-icon.png">
+                        <span class="tweet-user-name">anonymous</span>
+                        <span class="tweet-user-address">@anonymous</span>
+                        <span class="tweet-time">·</span>
+                        <span class="tweet-time">29 June 2014</span>
+                        <span class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae ligula aliquam lectus lobortis porta non a diam. Proin fringilla augue.</span>
+                        <span class="tweet-expand">Expand</span>
+                    </div>
+                    <div id="tweet-container">
+                        <img class="avatar-icon" src="./images/avatar-icon.png">
+                        <span class="tweet-user-name">anonymous</span>
+                        <span class="tweet-user-address">@anonymous</span>
+                        <span class="tweet-time">·</span>
+                        <span class="tweet-time">29 June 2014</span>
+                        <span class="tweet-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae ligula aliquam lectus lobortis porta non a diam. Proin fringilla augue.</span>
+                        <span class="tweet-expand">Expand</span>
+                    </div>
+
+            </div>          
+        </div>
+        <div class="bottom-section">
+            <div class="spinner-container">    
+                <div class="spinner">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function removeNavButtonSelection() {
+            var numButtons = $("#global-actions li").length;
+            var button;
+            for (i = 0; i < numButtons; i++) {
+                button = $('#global-actions').children().eq(i);
+                if ($(button).hasClass("active")) {
+                    $(button).removeClass("active");
+                }
+            }
+        }
+
+        function addTweet() {
+            var newTweet = $("#tweet-container").clone();
+            $(newTweet).appendTo(".tweet-column-wrapper").slideDown();
+        };
+
+        $(document).ready(function(){
+            $(".nav-button").click(function() {
+                var selected_button = $(this);
+                removeNavButtonSelection();
+                $(selected_button).addClass("active");
+            });
+
+            $("#direct-message").click(function() {
+                console.log("direct-message button clicked");
+            });
+
+            $("#settings").click(function() {
+                console.log("settings button clicked");
+            });
+
+            $("#compose").click(function() {
+                console.log("compose button clicked");
+            });
+
+            $("#user-link").click(function() {
+                console.log("user link clicked");
+            });
+            $(window).scroll(function () {
+                if($(window).scrollTop() + $(window).height() == $(document).height() ) {
+                    $(".spinner").show(function() {
+                        setTimeout(function() {
+                            $(".spinner").hide();
+                            addTweet();
+                            addTweet();
+                        }, 1500);
+                    });
+                };
+            });
+
+            $('.textbox').on('focus', function() {
+                $('.user-info-bottom').removeClass('container-blur');
+                $('.textbox').removeClass('textbox-blur');
+                $('.user-info-bottom').addClass('container-focus');
+                $('.textbox').addClass('textbox-focus');
+                $('.textbox').scrollTop($('.textbox')[0].scrollHeight +40);
+            }).on('blur', function() {
+                $('.user-info-bottom').removeClass('container-focus');
+                $('.textbox').removeClass('textbox-focus');
+                $('.user-info-bottom').addClass('container-blur');
+                $('.textbox').addClass('textbox-blur');
+            });
+            
+            $('#search-box').on('focus', function() {
+                $('#search-box').css('transition', 'background-color 0.3s ease-out');
+                $('#search-box').css('background-color', 'rgb(100, 100, 100)')
+            }).on('blur', function() {
+                $('#search-box').css('transition', 'background-color 0.3s ease-out');
+                $('#search-box').css('background-color', 'gray');
+            });
+        });
+    </script>
+</html>
+
