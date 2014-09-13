@@ -4,7 +4,8 @@
 
 * [Screenshot](#screenshot)
 * [General Description](#general-description)
-* [How to Run](#how-to-run)
+* [See it Live on Github](#see-it-live-on-github)
+* [How to Run Locally](#how-to-run-locally)
 * [Browsers](#browsers)
 
 
@@ -35,7 +36,16 @@ The guidlines for creating the mockup website were:
 * The mock-site should be responsive.
 
 
-##How to Run
+##See it Live on Github
+
+A live version of the app can be found at:
+
+[Twitter Demo on Github.io](http://nadavmatalon.github.io/twitter_demo/)
+
+(Please see notes about browser compatibility below).
+
+
+##How to Run Locally
 
 Clone the repo to a locall folder and in the terminal run:
 
@@ -56,6 +66,5 @@ This mock-site was created to support the following browsers (though it should h
 look ok in other browsers as well):
 
 * __Google Chrome__ (36.0)
-* __Mozilla Firefox__ (31.0)
 * __Apple Safari__ (7.0.5)
 
