@@ -1,9 +1,13 @@
 #Twitter Demo
 
+##Makers Academy | Week 8 | Challenge
+
+
 ## Table of Contents
 
 * [Screenshot](#screenshot)
 * [General Description](#general-description)
+* [Guidelines](#guidelines)
 * [See it Live on Github](#see-it-live-on-github)
 * [How to Run Locally](#how-to-run-locally)
 * [Browsers](#browsers)
@@ -16,11 +20,17 @@
 
 ##General Description
 
+This repo contians my answer to __Week 8 Friday Challange__ as part 
+of the course at [Makers Academy](http://www.makersacademy.com/).
+
 This frontpage mockup of [Twitter](https://twitter.com) was written over 
 a weekend as a test exercise in working with responsive 
 [HTML](http://www.w3schools.com/html/html5_intro.asp) content, 
 [CSS](http://www.w3schools.com/css/css3_intro.asp) styling, and basic [Javascript](http://en.wikipedia.org/wiki/JavaScript) 
-functionality as part of the course at [Makers Mcademy](http://www.makersacademy.com/).
+functionality.
+
+
+##Guidelines
 
 The guidlines for creating the mockup website were:
 
@@ -48,9 +58,9 @@ A live version of the app can be found at:
 Clone the repo to a locall folder and in the terminal run:
 
 ```bash
-$  cd twitter_demo
-$  bundle install
-$  shotgun
+$> cd twitter_demo
+$> bundle install
+$> shotgun
 ```
 
 Then open the browser of your choice and go to:
